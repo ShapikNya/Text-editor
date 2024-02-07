@@ -39,33 +39,39 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(24, 61);
+            textBox1.Font = new Font("Microsoft YaHei UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(71, 65);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new Size(398, 272);
+            textBox1.Size = new Size(464, 322);
             textBox1.TabIndex = 0;
             textBox1.Text = resources.GetString("textBox1.Text");
             textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(24, 357);
+            button1.Cursor = Cursors.Hand;
+            button1.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.HotTrack;
+            button1.Location = new Point(12, 412);
             button1.Name = "button1";
-            button1.Size = new Size(134, 69);
+            button1.Size = new Size(174, 69);
             button1.TabIndex = 1;
-            button1.Text = "button1";
+            button1.Text = "Сохранить";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(247, 9);
+            label1.Font = new Font("Vivaldi", 24F, FontStyle.Bold | FontStyle.Italic | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Highlight;
+            label1.Location = new Point(210, 6);
             label1.Name = "label1";
-            label1.Size = new Size(50, 20);
+            label1.Size = new Size(179, 47);
             label1.TabIndex = 2;
-            label1.Text = "label1";
+            label1.Text = "Lebedactor";
             // 
             // saveFileDialog1
             // 
@@ -79,11 +85,14 @@
             // 
             // button2
             // 
-            button2.Location = new Point(187, 357);
+            button2.Cursor = Cursors.Hand;
+            button2.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.Highlight;
+            button2.Location = new Point(429, 412);
             button2.Name = "button2";
-            button2.Size = new Size(139, 69);
+            button2.Size = new Size(174, 69);
             button2.TabIndex = 3;
-            button2.Text = "button2";
+            button2.Text = "Загрузить";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -91,13 +100,15 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(615, 465);
+            BackColor = SystemColors.ActiveCaption;
+            ClientSize = new Size(615, 506);
             Controls.Add(button2);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(textBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Editor";
             ResumeLayout(false);
             PerformLayout();
         }
