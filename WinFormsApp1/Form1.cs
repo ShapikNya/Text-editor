@@ -1,9 +1,11 @@
+using System.Media;
 using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+        SoundPlayer sf = new SoundPlayer(@"Music.wav");
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace WinFormsApp1
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,6 +39,13 @@ namespace WinFormsApp1
                 textBox1.Text = sr.ReadToEnd();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Form2 newForm = new Form2();
+            newForm.Show();
+            sf.Play();
         }
     }
+}
 
